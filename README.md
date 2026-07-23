@@ -28,6 +28,15 @@ Teaches kustomize about the `JavaApplication` CRD:
 
 If a CRD schema changes, update the Component **and cut a new release** - consumers pinning the previous tag stay safe.
 
+## Constraint: transformer configuration only
+
+Components in this repo **must only declare `configurations:`** (paths for kustomize's builtin transformers: `images`, `nameReference`, `varReference`, …).
+
+Do **not** add resources, patches, generators, or any content with side effects.
+
+Transformer configurations are safe because they are **idempotent**: registering the same FieldSpec twice yields the same result, and applying the same transformation twice on a field is a no-op. This lets a Component be transitively included multiple times through different bases in a single overlay without breaking the build.
+
+
 ## Contributing
 
 1. Add a new Component under `<crd>/` with its `kustomization.yaml` (`kind: Component`) and transformer config file, or edit an existing one.
