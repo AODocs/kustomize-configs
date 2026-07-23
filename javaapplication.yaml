@@ -1,0 +1,13 @@
+images:
+  - path: spec/image
+    kind: JavaApplication
+
+nameReference:
+  - kind: ConfigMap
+    fieldSpecs:
+      - path: spec/envFrom/name
+        kind: JavaApplication
+  - kind: Secret
+    fieldSpecs:
+      - path: spec/envFrom/name
+        kind: JavaApplication
