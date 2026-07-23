@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/AODocs/kustomize-configs/compare/v1.0.0...v1.0.1) (2026-07-23)
+
+
+### Bug Fixes
+
+* use a component ([9b0c9d8](https://github.com/AODocs/kustomize-configs/commit/9b0c9d8fcb2956b31b1e687bc9b4cdcbcd39f7b8))
+
 # 1.0.0 (2026-07-23)
 
 
