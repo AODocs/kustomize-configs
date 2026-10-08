@@ -1,0 +1,25 @@
+images:
+  - path: spec/image
+    kind: AODocsApplication
+
+nameReference:
+  - kind: ConfigMap
+    fieldSpecs:
+      - path: spec/envFrom/name
+        kind: AODocsApplication
+      - path: spec/env/valueFrom/name
+        kind: AODocsApplication
+      - path: spec/volumeMounts/name
+        kind: AODocsApplication
+  - kind: Secret
+    fieldSpecs:
+      - path: spec/envFrom/name
+        kind: AODocsApplication
+      - path: spec/env/valueFrom/name
+        kind: AODocsApplication
+      - path: spec/volumeMounts/name
+        kind: AODocsApplication
+  - kind: ServiceAccount
+    fieldSpecs:
+      - path: spec/serviceAccountName
+        kind: AODocsApplication
